@@ -1,0 +1,40 @@
+name: lapor_des
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  firebase_core: ^3.14.0 # Untuk inisialisasi Firebase
+  firebase_auth: ^5.6.0 # Untuk autentikasi (kita akan 'simulasikan' NIK login dengannya)
+  cloud_firestore: ^5.6.9 # Untuk menyimpan data user dan laporan
+  shared_preferences: ^2.5.3 # Opsional, jika perlu menyimpan preferensi lain
+  smooth_page_indicator: ^1.2.1 # Indikator halaman untuk tab geser
+  # Untuk notifikasi pop-up
+  fluttertoast: ^8.2.12 # Notifikasi kecil di bagian bawah layar
+  cached_network_image: ^3.4.1
+  intl: ^0.20.2
+  image_picker: ^1.1.2
+  firebase_storage: ^12.4.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.png
