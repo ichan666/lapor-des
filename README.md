@@ -12,95 +12,55 @@ Aplikasi Lapor Desa dirancang untuk menyederhanakan proses pelaporan dan pengelo
 
 Untuk Warga (Pengguna):
 
+- Registrasi NIK: Proses verifikasi NIK (Nomor Induk Kependudukan) untuk memastikan keabsahan warga. Admin dapat menambahkan NIK yang valid, dan warga dapat menghubungkan akun mereka dengan NIK tersebut saat registrasi.
 
+- Kirim Laporan: Kemampuan untuk mengirimkan laporan atau pengaduan dengan detail judul dan deskripsi masalah.
 
-Registrasi NIK: Proses verifikasi NIK (Nomor Induk Kependudukan) untuk memastikan keabsahan warga. Admin dapat menambahkan NIK yang valid, dan warga dapat menghubungkan akun mereka dengan NIK tersebut saat registrasi.
+- Lihat Status Laporan: Memantau status laporan yang telah dikirim (misalnya: Menunggu Proses, Diterima Admin, Selesai Diproses, Ditolak).
 
+- Lihat Pengumuman Desa: Akses informasi dan pengumuman terbaru dari pihak desa.
 
+- Lihat Kegiatan Desa: Informasi mengenai jadwal dan detail kegiatan yang diselenggarakan di desa.
 
-Kirim Laporan: Kemampuan untuk mengirimkan laporan atau pengaduan dengan detail judul dan deskripsi masalah.
-
-
-
-Lihat Status Laporan: Memantau status laporan yang telah dikirim (misalnya: Menunggu Proses, Diterima Admin, Selesai Diproses, Ditolak).
-
-
-
-Lihat Pengumuman Desa: Akses informasi dan pengumuman terbaru dari pihak desa.
-
-
-
-Lihat Kegiatan Desa: Informasi mengenai jadwal dan detail kegiatan yang diselenggarakan di desa.
-
-
-
-Galeri Foto Desa: Melihat koleksi foto-foto desa dan kegiatan.
+- Galeri Foto Desa: Melihat koleksi foto-foto desa dan kegiatan.
 
 
 
 Untuk Admin:
 
+- Dashboard Admin: Tampilan khusus untuk mengelola aplikasi.
 
+- Manajemen Laporan: Melihat daftar semua laporan yang masuk, lengkap dengan detail pelapor (nama dan NIK).
 
-Dashboard Admin: Tampilan khusus untuk mengelola aplikasi.
+- Pembaruan Status Laporan: Mengubah status laporan (misalnya: dari 'pending' menjadi 'received', 'processed', atau 'rejected').
 
+- Manajemen Pengumuman: Menambah, mengedit, dan menghapus pengumuman desa.
 
+- Manajemen Kegiatan: Menambah, mengedit, dan menghapus detail kegiatan desa.
 
-Manajemen Laporan: Melihat daftar semua laporan yang masuk, lengkap dengan detail pelapor (nama dan NIK).
+- Manajemen Foto Desa: Mengunggah, mengedit, dan menghapus foto-foto di galeri desa.
 
+- Manajemen Data Warga (NIK): Menambah dan mengelola daftar NIK yang valid untuk pendaftaran warga.
 
-
-Pembaruan Status Laporan: Mengubah status laporan (misalnya: dari 'pending' menjadi 'received', 'processed', atau 'rejected').
-
-
-
-Manajemen Pengumuman: Menambah, mengedit, dan menghapus pengumuman desa.
-
-
-
-Manajemen Kegiatan: Menambah, mengedit, dan menghapus detail kegiatan desa.
-
-
-
-Manajemen Foto Desa: Mengunggah, mengedit, dan menghapus foto-foto di galeri desa.
-
-
-
-Manajemen Data Warga (NIK): Menambah dan mengelola daftar NIK yang valid untuk pendaftaran warga.
-
-
-
-Manajemen Role Pengguna: Memberikan atau mengubah role pengguna (misalnya, dari 'user' menjadi 'admin' untuk admin baru).
+- Manajemen Role Pengguna: Memberikan atau mengubah role pengguna (misalnya, dari 'user' menjadi 'admin' untuk admin baru).
 
 
 
 🚀 Teknologi yang Digunakan
 
-Flutter: Framework UI untuk membangun aplikasi mobile native dari satu basis kode.
+- Flutter: Framework UI untuk membangun aplikasi mobile native dari satu basis kode.
 
+- Firebase Authentication: Sistem autentikasi pengguna (email \& password).
 
+- Cloud Firestore: Database NoSQL untuk menyimpan data aplikasi (laporan, pengguna, pengumuman, kegiatan, dll.).
 
-Firebase Authentication: Sistem autentikasi pengguna (email \& password).
+- Firebase Storage: (Opsional, jika ingin menambahkan fitur upload gambar di kemudian hari) Untuk menyimpan file media seperti gambar.
 
+- image\_picker: (Opsional) Untuk memilih gambar dari galeri perangkat.
 
+- fluttertoast: Untuk menampilkan pesan notifikasi singkat (toast messages) kepada pengguna.
 
-Cloud Firestore: Database NoSQL untuk menyimpan data aplikasi (laporan, pengguna, pengumuman, kegiatan, dll.).
-
-
-
-Firebase Storage: (Opsional, jika ingin menambahkan fitur upload gambar di kemudian hari) Untuk menyimpan file media seperti gambar.
-
-
-
-image\_picker: (Opsional) Untuk memilih gambar dari galeri perangkat.
-
-
-
-fluttertoast: Untuk menampilkan pesan notifikasi singkat (toast messages) kepada pengguna.
-
-
-
-intl: Untuk memformat tanggal dan waktu.
+- intl: Untuk memformat tanggal dan waktu.
 
 
 
@@ -108,62 +68,42 @@ intl: Untuk memformat tanggal dan waktu.
 
 Ikuti langkah-langkah di bawah ini untuk menjalankan proyek secara lokal:
 
+* Prasyarat *
 
+- Flutter SDK terinstal di mesin Anda.
 
-Prasyarat
+- Firebase CLI terinstal.
 
-Flutter SDK terinstal di mesin Anda.
-
-
-
-Firebase CLI terinstal.
-
-
-
-Akun Firebase dengan proyek yang sudah dibuat.
-
-
+- Akun Firebase dengan proyek yang sudah dibuat.
 
 Proyek Firebase Anda harus mengaktifkan:
 
+- Authentication (Email/Password provider).
 
+- Cloud Firestore Database.
 
-Authentication (Email/Password provider).
-
-
-
-Cloud Firestore Database.
-
-
-
-Cloud Storage (Jika Anda berencana mengaktifkan fitur gambar).
-
+- Cloud Storage (Jika Anda berencana mengaktifkan fitur gambar).
 
 
 Langkah-langkah Setup
 
-Clone Repositori:
-
-
+- Clone Repositori:
 
 Bash
 
 
 
-git clone <URL\_REPOSITORI\_ANDA>
+git clone github.com/ichan666/lapor-des/edit
 
 cd lapor-desa-app
 
 Konfigurasi Firebase:
 
 
-
 Di Firebase Console, buka pengaturan proyek Anda.
 
 
-
 Tambahkan aplikasi Android dan/atau iOS ke proyek Firebase Anda. Ikuti petunjuk untuk mengunduh google-services.json (Android) dan GoogleService-Info.plist (iOS) dan letakkan di direktori yang sesuai (android/app/ dan ios/Runner/).
-
 
 
 Jalankan flutterfire configure dari terminal di root proyek Anda untuk memastikan konfigurasi Firebase Anda benar.
